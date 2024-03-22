@@ -12,3 +12,7 @@ pub mod mycalculatorapp {
         ok(())
     }
 }
+
+#derrive(Accounts)
+pub struct create<'info> {
+}
