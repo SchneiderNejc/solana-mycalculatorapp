@@ -24,4 +24,7 @@ pub struct create<'info> {
 
 #[account]
 pub struct Calculator {
+    pub greeting: String,
+    pub result: i64,
+    pub remainder: i64
 }
