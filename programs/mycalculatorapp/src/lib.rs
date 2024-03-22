@@ -10,6 +10,3 @@ pub mod mycalculatorapp {
         Ok(())
     }
 }
-
-#[derive(Accounts)]
-pub struct Initialize {}
