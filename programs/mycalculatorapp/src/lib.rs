@@ -6,5 +6,9 @@ declare_id!("39YeeYEbuTkW9V39ynusS7FQNT59aGKEx1RZSAMg7JNr");
 pub mod mycalculatorapp {
     use super::*;
 
+    pub fn create(ctx: Context<Create>, init_message: String) -> ProgramResult {
+        let calculator = &mut ctx.accounts.calculator;
+        calculator.greeting = init_message;
+        ok(())
     }
 }
