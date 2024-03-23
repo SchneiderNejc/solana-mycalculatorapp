@@ -14,8 +14,8 @@ pub mod mycalculatorapp {
     }
 }
 
-pub struct create<'info> {
 #[derive(Accounts)]
+pub struct Create<'info> {
     #[account(init, payer=user, space=264)]
     pub calculator: Account<'info, Calculator>
     #[account(mut)]
