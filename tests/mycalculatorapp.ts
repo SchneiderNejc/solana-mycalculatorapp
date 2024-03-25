@@ -9,4 +9,7 @@ describe('mycalculatordapp', () => {
     it('Creates a caluclator', async() => {
     })
     const calculator = anchor.web3.Keypair.generate();
+
+    it("Creates a calculator", async () => {
+    });
 })
