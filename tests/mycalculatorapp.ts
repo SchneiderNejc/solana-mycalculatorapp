@@ -11,5 +11,13 @@ describe('mycalculatordapp', () => {
     const calculator = anchor.web3.Keypair.generate();
 
     it("Creates a calculator", async () => {
+        await program.rpc.create("Welcome to Solana", {
+            accounts: {
+                calculator: calculator.publicKey,
+                user: provider.wallet.publicKey,
+                systemProgram: SystemProgram.programId,
+            },
+            signers: [calculator],
+        });
     });
 })
