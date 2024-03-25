@@ -22,5 +22,6 @@ describe('mycalculatordapp', () => {
         const account = await program.account.calculator.fetch(
             calculator.publicKey
         );
+        assert.ok(account.greeting === "Welcome to Solana");
     });
 })
