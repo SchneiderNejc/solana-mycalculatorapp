@@ -19,5 +19,8 @@ describe('mycalculatordapp', () => {
             },
             signers: [calculator],
         });
+        const account = await program.account.calculator.fetch(
+            calculator.publicKey
+        );
     });
 })
