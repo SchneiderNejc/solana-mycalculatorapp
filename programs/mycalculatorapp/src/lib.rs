@@ -12,6 +12,12 @@ pub mod mycalculatorapp {
         calculator.greeting = init_message;
         Ok(())
     }
+
+    pub fn add(ctx: Context<Addition>, num1: i64, num2: i64) -> ProgramResult {
+        let calculator = &mut ctx.accounts.calculator;
+        calculator.result = num1 + num2;
+        Ok(())
+    }
 }
 
 #[derive(Accounts)]
