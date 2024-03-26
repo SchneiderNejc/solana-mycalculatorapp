@@ -37,4 +37,7 @@ describe("mycalculatordapp", () => {
         );
         assert.ok(account.result.eq(new anchor.BN(5)))
     })
+
+    it('Subtracts two numbers', async () => {
+    })
 })
