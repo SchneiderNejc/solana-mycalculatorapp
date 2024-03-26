@@ -7,11 +7,11 @@ describe("mycalculatordapp", () => {
     const provider = anchor.getProvider();
     anchor.setProvider(provider);
 
-    it('Creates a caluclator', async() => {
-    })
     const calculator = anchor.web3.Keypair.generate();
-
+    const program = anchor.workspace.Mycalculatorapp;
+    
     it("Creates a calculator", async () => {
+
         await program.rpc.create("Welcome to Solana", {
             accounts: {
                 calculator: calculator.publicKey,
