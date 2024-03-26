@@ -24,5 +24,8 @@ describe("mycalculatordapp", () => {
             calculator.publicKey
         );
         assert.ok(account.greeting === "Welcome to Solana");
-    });
+    })
+
+    it('Adds two numbers', async() => {
+    })
 })
