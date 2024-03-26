@@ -41,6 +41,12 @@ pub struct Addition<'info> {
     pub calculator: Account<'info, Calculator>
 }
 
+#[derive(Accounts)]
+pub struct Subtraction<'info> {
+    #[account(mut)]
+    pub calculator: Account<'info, Calculator>
+}
+
 #[account]
 pub struct Calculator {
     pub greeting: String,
