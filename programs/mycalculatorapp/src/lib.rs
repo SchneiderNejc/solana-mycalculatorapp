@@ -29,6 +29,12 @@ pub struct Create<'info> {
     pub system_program: Program<'info, System>
 }
 
+#[derive(Accounts)]
+pub struct Addition<'info> {
+    #[account(mut)]
+    pub calculator: Account<'info, Calculator>
+}
+
 #[account]
 pub struct Calculator {
     pub greeting: String,
