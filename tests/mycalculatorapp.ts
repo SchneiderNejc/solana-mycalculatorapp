@@ -61,7 +61,9 @@ describe("mycalculatordapp", () => {
         );
         assert.ok(account.result.eq(new anchor.BN(6)))
     })
+
     it('Divides two numbers', async () => {
+        await program.rpc.divide(new anchor.BN(7), new anchor.BN(2), {
             accounts: {
                 calculator: calculator.publicKey
             }
@@ -70,5 +72,6 @@ describe("mycalculatordapp", () => {
             calculator.publicKey
         );
         assert.ok(account.result.eq(new anchor.BN(3)))
+        assert.ok(account.remainder.eq(new anchor.BN(1)))
     })
 })
