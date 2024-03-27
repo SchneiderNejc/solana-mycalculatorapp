@@ -61,6 +61,7 @@ describe("mycalculatordapp", () => {
         );
         assert.ok(account.result.eq(new anchor.BN(6)))
     })
+    it('Divides two numbers', async () => {
             accounts: {
                 calculator: calculator.publicKey
             }
